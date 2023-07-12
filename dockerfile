@@ -1,20 +1,18 @@
-# Use an official Node.js runtime as a parent image
-FROM node:14-alpine
+#syntax=docker/dockerfile:1
 
-# Set the working directory to /app
+FROM golang:1.19-alpine
+
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY go.mod ./
+COPY go.sum ./
 
-# Install dependencies
-RUN npm install
+RUN go mod download
 
-# Copy the current directory contents into the container at /app
-COPY . .
+COPY *.go ./
 
-# Expose port 3000 for the Express.js app
-EXPOSE 3000
+RUN go build -o /service-camp-details
 
-# Set the command to run when the container starts
-CMD ["npm", "start"]
+EXPOSE 8080
+
+CMD [ "/service-camp-details" ]
