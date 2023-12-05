@@ -1,0 +1,7 @@
+Dockerfile
+.dockerignore
+README.md
+.git
+./tmp/gin.log
+.env.example
+.env.prod
