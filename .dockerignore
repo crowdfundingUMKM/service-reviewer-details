@@ -5,3 +5,4 @@ README.md
 ./tmp/gin.log
 .env.example
 .env.prod
+./database/db_review.sql

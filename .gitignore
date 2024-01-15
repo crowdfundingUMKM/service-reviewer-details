@@ -25,3 +25,6 @@ go.work
 
 # log
 /tmp/gin.log 
+
+# GCP SECRET
+secret-keys.json
