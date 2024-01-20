@@ -28,3 +28,4 @@ go.work
 
 # GCP SECRET
 secret-keys.json
+keys.json
