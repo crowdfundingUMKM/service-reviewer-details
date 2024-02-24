@@ -2,11 +2,16 @@ module service-reviewer-details
 
 go 1.19
 
-require github.com/go-playground/validator/v10 v10.14.1
+require (
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
+	github.com/gin-gonic/gin v1.8.1
+	github.com/go-playground/validator/v10 v10.14.1
+	github.com/joho/godotenv v1.5.1
+	gorm.io/gorm v1.25.1
+)
 
 require (
 	github.com/gin-contrib/sse v0.1.0 // indirect
-	github.com/gin-gonic/gin v1.8.1 // indirect
 	github.com/go-sql-driver/mysql v1.7.0 // indirect
 	github.com/goccy/go-json v0.9.7 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
@@ -19,7 +24,6 @@ require (
 	github.com/ugorji/go/codec v1.2.7 // indirect
 	google.golang.org/protobuf v1.28.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	gorm.io/gorm v1.25.1 // indirect
 )
 
 require (
